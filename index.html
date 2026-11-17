@@ -4,27 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leo Xu</title>
-<style>
-  body {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    max-width: 720px;
-    margin: 40px auto;
-    padding: 0 16px;
-    line-height: 1.6;
-    color: #111;
-    background: #fff;
-  }
-  h1 { font-size: 1.4em; margin-bottom: 0; }
-  h2 { font-size: 1.1em; border-bottom: 1px solid #ccc; margin-top: 2.5em; }
-  h3 { font-size: 1em; margin-bottom: 0.2em; }
-  a { color: #00e; }
-  .meta { color: #666; font-size: 0.9em; margin: 0; }
-  .project { margin-bottom: 2.5em; }
-  .demo { position: relative; padding-bottom: 56.25%; height: 0; margin: 0.8em 0; }
-  .demo iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-  video.portrait { display: block; width: 100%; max-width: 360px; margin: 0.8em 0; }
-  footer { margin-top: 4em; color: #888; font-size: 0.8em; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -43,71 +23,46 @@ Love Music and Interaction :)
 <a href="https://github.com/RealLeoXu">github</a>
 </p>
 
-<h2>Projects</h2>
+<nav>
+  <a href="#software">Music Software</a>
+  <a href="#hardware">Weird Hardware</a>
+</nav>
 
-<!-- ============================================================
-     加 demo：把 VIDEO_ID 换成 YouTube 链接里 v= 后面那串字符。
-     没视频的项目，直接删掉整个 <div class="demo">...</div>。
-     SoundCloud 的话，在 SoundCloud 点 Share → Embed，把 iframe 贴进 .demo 里。
-     ============================================================ -->
+<!-- 加新项目：在 projects/ 里复制一个 .html 改内容，再在下面对应的 grid 里加一张 card。
+     YouTube 缩略图：https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg -->
 
-<div class="project">
-  <h3>GORGE</h3>
-  <p class="meta">2026 · Max / Gen / RNBO / JUCE · Berklee capstone (advisor: Dr. Richard Boulanger)</p>
-  <p>
-    A real-time synthesizer turns vocal into GROWL BASS! 
-    Released free as a plugin (v1.2).
-  </p>
-  <div class="demo">
-    <iframe src="https://www.youtube.com/embed/7ytQX3ljdQk" loading="lazy" allowfullscreen></iframe>
-  </div>
-  <p><a href="https://github.com/RealLeoXu/GORGE/releases">download (macOS VST3 / AU)</a></p>
+<h2 id="software">Music Software</h2>
+<div class="grid">
+  <a class="card" href="projects/gorge.html">
+    <img src="https://img.youtube.com/vi/7ytQX3ljdQk/hqdefault.jpg" alt="" loading="lazy">
+    <b>GORGE</b>
+    <span>Vocal → growl bass synth</span>
+  </a>
+  <a class="card" href="projects/jitter-chord-generator.html">
+    <img src="https://img.youtube.com/vi/Mvf4Org5JKM/hqdefault.jpg" alt="" loading="lazy">
+    <b>Jitter Chord Generator</b>
+    <span>Camera color → chords</span>
+  </a>
+  <a class="card" href="projects/grid-sequencer.html">
+    <img src="https://img.youtube.com/vi/AnhK_AhuoTQ/hqdefault.jpg" alt="" loading="lazy">
+    <b>Dual Monome Grid Step Sequencer</b>
+    <span>Step sequencer on two Grids</span>
+  </a>
+  <a class="card" href="projects/looper.html">
+    <img src="https://img.youtube.com/vi/VaeHFfGcHXQ/hqdefault.jpg" alt="" loading="lazy">
+    <b>Real-time Recorder / Looper</b>
+    <span>Record and loop in Max</span>
+  </a>
 </div>
 
-
-<div class="project">
-  <h3>Jitter Chord Generator</h3>
-  <p class="meta">2026 · Max / Jitter</p>
-  <p>
-    Reads hue from a live camera and maps it to modal chords.
-  </p>
-  <div class="demo">
-    <iframe src="https://www.youtube.com/embed/Mvf4Org5JKM" loading="lazy" allowfullscreen></iframe>
-  </div>
+<h2 id="hardware">Weird Hardware</h2>
+<div class="grid">
+  <a class="card" href="projects/sensor-drum.html">
+    <img src="media/sensor-drum.jpg" alt="" loading="lazy">
+    <b>Sensor Drum</b>
+    <span>Hit the air, play congas</span>
+  </a>
 </div>
-
-<div class="project">
-  <h3>Dual Monome Grid Step Sequencer</h3>
-  <p class="meta">Max · 2× Monome Grid</p>
-  <p>
-    Step sequencer played across two Monome Grids.
-  </p>
-  <div class="demo">
-    <iframe src="https://www.youtube.com/embed/AnhK_AhuoTQ" loading="lazy" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Real-time Recorder / Looper</h3>
-  <p class="meta">Max</p>
-  <p>
-    Real-time audio recorder and looper built in Max.
-  </p>
-  <div class="demo">
-    <iframe src="https://www.youtube.com/embed/VaeHFfGcHXQ" loading="lazy" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-<h2>Weird Hardware</h2>
-
-<div class="project">
-  <h3>Sensor Drum</h3>
-  <p>Hit the air, play congas.</p>
-  <video class="portrait" src="media/sensor-drum.mp4" controls playsinline preload="metadata"></video>
-  <p><a href="https://github.com/RealLeoXu/SensorDrum">code</a></p>
-</div>
-
 
 <footer>last updated 2026-11</footer>
 
